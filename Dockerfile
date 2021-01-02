@@ -8,6 +8,6 @@ RUN apt-get install -y build-essential autoconf automake libtool pkg-config git
 
 RUN wget https://raw.githubusercontent.com/libbitcoin/libbitcoin-explorer/version3/install.sh
 RUN chmod +x install.sh
-RUN ./install.sh --build-boost --build-zmq --disable-shared
+RUN ./install.sh --with-icu --with-png --with-qrencode --build-icu --build-zlib --build-png --build-qrencode --build-boost --build-zmq --disable-shared
 
 ENTRYPOINT ["bx"]
